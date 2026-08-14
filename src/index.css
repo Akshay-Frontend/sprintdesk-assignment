@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 255 255 255;
+    --bg-subtle: 249 250 251;
+    --bg-muted: 243 244 246;
+    --fg: 17 24 39;
+    --fg-muted: 75 85 99;
+    --fg-subtle: 156 163 175;
+    --fg-inverse: 255 255 255;
+    --border: 229 231 235;
+    --border-strong: 209 213 219;
+    --brand: 79 70 229;
+    --brand-hover: 67 56 202;
+    --brand-subtle: 238 242 255;
+    --danger: 220 38 38;
+    --danger-hover: 185 28 28;
+    --danger-subtle: 254 242 242;
+    --success: 22 163 74;
+    --warning: 217 119 6;
+  }
+
+  .dark {
+    --bg: 15 17 22;
+    --bg-subtle: 21 24 31;
+    --bg-muted: 30 33 42;
+    --fg: 237 240 245;
+    --fg-muted: 163 170 182;
+    --fg-subtle: 107 114 128;
+    --fg-inverse: 17 24 39;
+    --border: 39 43 54;
+    --border-strong: 55 61 76;
+    --brand: 129 140 248;
+    --brand-hover: 165 180 252;
+    --brand-subtle: 30 27 75;
+    --danger: 248 113 113;
+    --danger-hover: 252 165 165;
+    --danger-subtle: 69 10 10;
+    --success: 74 222 128;
+    --warning: 251 191 36;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-bg text-fg antialiased;
+    font-family:
+      'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+      Arial, sans-serif;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-bg;
+  }
+}
